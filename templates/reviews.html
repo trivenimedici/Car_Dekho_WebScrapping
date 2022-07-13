@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Reviews Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    
+    <!-- Style -->
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link href="../static/css/main.css" rel="stylesheet" />
+{% if rows is none %}
+  {% endif %}
+</head>
+
+<body>
+  <div class="content">
+    <div class="container">
+      <h1 class="mx-auto" style="width: 200px;">User Reviews</h1>
+   <div class="table-responsive">
+      <table class="table table-striped custom-table" >
+        <thead >
+            <tr>
+                <th scope="col">Product Name</th>
+                <th scope="col">Over All Rating</th>
+                <th scope="col">Price</th>
+                <th scope="col">Review Title</th>
+                <th  scope="col">Review Description</th>
+                <th scope="col">Review Author</th>
+                <th scope="col">User Rating</th>
+                <th scope="col">Review Date</th>
+             </tr>
+        </thead>
+        <tbody>
+
+            {% if rows is not none %}
+            {% for review in rows %}
+            <tr scope="row">
+                <td>{{review['Car_Name']}}</td>
+                <td>{{review['OverAll_Rating']}}</td>
+                <td>{{review['Price']}}</td>
+                <td>{{review['Rating_Title']}}</td>
+                <td>{{review['Reviews_Description']}}</td>
+                <td>{{review['Review_Author']}} </td>
+                <td>{{review['User_Rating']}} </td>
+                <td>{{review['Review_Date']}}</td>
+            {% endfor %}
+            {% endif %}
+        </tbody>
+      </table>
+   </div>
+   
+</div>
+
+</div>
+<footer class="mt-auto">
+  <div class="input-field text-center card-footer">
+   <button onclick="location.href = '/'" class="btn  backBtn " type="button" >View Reviews for Another Car</button>
+ </div>
+</footer>
+<script src="../static/js/jquery-3.3.1.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/main.js"></script>
+</body>
+</html>
