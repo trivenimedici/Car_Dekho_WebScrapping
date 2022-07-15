@@ -515,7 +515,7 @@ legend {
   -ms-flex-align: center;
       align-items: center;
   font-family: 'Poppins', sans-serif;
-  background: url("static/images/Search_001.jpg");
+  background: url("../images/search_001.jpg");
   background-size: cover;
   background-position: center center;
   padding: 15px;
