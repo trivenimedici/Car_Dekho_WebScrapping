@@ -9,7 +9,7 @@ class MongoDBManagement:
         try:
             self.username=username
             self.password=password
-            self.url="mongodb+srv://{}:{}@cluster0.nlf9qxq.mongodb.net/?retryWrites=true&w=majority".format(self.username, self.password)
+            self.url="mongodb+srv://{}:{}@cluster0.nlf9qxq.mongodb.net/CarDekhoWebScrapping?retryWrites=true&w=majority".format(self.username, self.password)
         except Exception as e:
             raise Exception(f"(__init__): Something went wrong on initiation process\n" + str(e))
 
